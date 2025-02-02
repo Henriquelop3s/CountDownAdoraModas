@@ -14,8 +14,30 @@
   }
 }
 
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9WdB.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXDTc1fH4uKx1A.ttf') format('truetype');
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif, "Bebas Neue";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Impede o scroll */
+}
+
+* {
+  box-sizing: border-box; /* Para evitar problemas de layout */
 }
