@@ -10,7 +10,7 @@ interface TimeLeft {
 }
 
 export default function Countdown() {
-  const launchDate = new Date("2025-03-01T00:00:00").getTime();
+  const launchDate = new Date("2025-02-15T00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   function calculateTimeLeft(): TimeLeft | null {
@@ -39,7 +39,7 @@ export default function Countdown() {
 
   if (!timeLeft) {
     return (
-      <div className="w-full h-screen bg-black flex flex-col items-center justify-center">
+      <div className="w-full h-screen bg-white flex flex-col items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -66,7 +66,7 @@ export default function Countdown() {
   }
 
   return (
-    <div className="w-full h-screen bg-black flex flex-col items-center justify-center">
+    <div className="w-full h-screen bg-white flex flex-col items-center justify-center">
       <div className="flex flex-row items-center gap-4">
         <TimeBox label="dias" value={timeLeft.days} />
         <TimeBox label="horas" value={timeLeft.hours} />
@@ -89,7 +89,7 @@ function TimeBox({ label, value }: TimeBoxProps) {
       style={{ overflow: "hidden" }}
     >
       <span
-        className="text-5xl text-white"
+        className="text-5xl text-black"
         style={{
           fontFamily: "'Playfair Display', serif", // Fonte correta para números
         }}
@@ -97,7 +97,7 @@ function TimeBox({ label, value }: TimeBoxProps) {
         {value}
       </span>
       <span
-        className="uppercase text-sm text-gray-300"
+        className="uppercase text-sm text-gray-500"
         style={{
           fontFamily: "'Bebas Neue', sans-serif", // Fonte correta para rótulos
         }}
